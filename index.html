@@ -36,6 +36,45 @@
     .mb-1 {
         margin-bottom: 0.5em;
     }
+
+    .card-symbol {
+        display: inline-block;
+        margin: 1px 1px -1px 1px;
+        margin-left: 1px;
+        -webkit-border-radius: 500px;
+        border-radius: 500px;
+        -webkit-box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.85);
+        box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.85);
+        text-indent: -999em;
+        overflow: hidden;
+        width: 15px;
+        height: 15px;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        background-position: top left;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    .card-symbol-W {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdC b3g9JzAgMCAxMDAgMTAwJz48ZyBmaWxsPSdub25lJz48Y2lyY2xlIGZpbGw9 JyNGOEY2RDgnIGN4PSc1MCcgY3k9JzUwJyByPSc1MCcvPjxwYXRoIGQ9J005 Ny42OTEgNTcuMDY0Yy02LjU2MS0zLjY5OS0xMC43NjgtNS41NTEtMTIuNjE3 LTUuNTUxLTEuMzQ0IDAtMi4zOTUgMS4wMzItMy4xNTQgMy4wOTItLjc1OCAy LjA2My0yLjI3IDMuMDktNC41NDEgMy4wOS0uOTI2IDAtMi44MTgtLjMzNi01 LjY3OC0xLjAwOC0xLjU5OCAyLjQ0LTIuMzk4IDMuOTk2LTIuMzk4IDQuNjY4 IDAgLjkyNi42ODkgMi4wMTYgMi4wNjQgMy4yODEgMS4zNzUgMS4yNjIgMi41 MzUgMS44OTEgMy40ODIgMS44OTEuNjAyIDAgMS40MTYtLjEyNSAyLjQ0OS0u Mzc5IDEuMDMxLS4yNSAxLjcyMS0uMzc3IDIuMDY0LS4zNzcgMS4wMzMgMCAx LjU0NyAxLjg5MyAxLjU0NyA1LjY3OCAwIDMuNjE3LS44NCA5LjE2OC0yLjUy MyAxNi42NTQtMi4xODgtOC41OC00LjUtMTIuODcxLTYuOTM4LTEyLjg3MS0u MzM4IDAtMS4wMzEuMjUyLTIuMDgyLjc2LTEuMDUzLjUwMi0xLjgzLjc1NC0y LjMzNC43NTQtMi40MzggMC00LjYyNS0yLjIyNy02LjU2MS02LjY4OC0zLjg2 OS41OS01LjgwNSAyLjU2Ny01LjgwNSA1LjkzNCAwIDEuNjg0Ljc3NyAzLjAy NyAyLjMzNiA0LjAzNSAxLjU1MyAxLjAwOCAyLjMzNCAxLjcyNyAyLjMzNCAy LjE0NSAwIDIuMjczLTMuMzI0IDUuNzY0LTkuOTY5IDEwLjQ3My0zLjUzMSAy LjUyMy01Ljk3MyA0LjI4OS03LjMxNiA1LjI5NyAxLjE3NC0xLjUxMiAyLjM1 Mi0zLjQ4NyAzLjUzMy01LjkyOCAxLjM0NC0yLjc3NSAyLjAxOC00LjkyIDIu MDE4LTYuNDM2IDAtLjg0LS45NjctMi4wMi0yLjkwMi0zLjUzMy0xLjkzNi0x LjUxMi0yLjktMy4xMTEtMi45LTQuNzkzIDAtMS40MjguNTAyLTMuMTkzIDEu NTEyLTUuMjk5LTEuMDk0LTEuMjYyLTIuMzk1LTEuODk1LTMuOTEtMS44OTUt My4zNjUgMC01LjA0NSAxLjA5Ni01LjA0NSAzLjI4djMuNDA2Yy4wODIgMi43 NzYtMi4wMiA0LjE2NC02LjMxMSA0LjE2NC0zLjI3OSAwLTguNzkxLS43NTkt MTYuNTI3LTIuMjcxIDguNzQ4LTIuMTg4IDEzLjEyMS00LjcxMSAxMy4xMjEt Ny41NyAwIC4zMzYtLjE2OC0uNjcyLS41MDQtMy4wMjgtLjMzOC0yLjYwNCAx LjUxNC00Ljk2MSA1LjU1MS03LjA2My0uNzU4LTMuODY3LTIuNzczLTUuODA2 LTYuMDU3LTUuODA2LS41MDQgMC0xLjQzMi44ODQtMi43NzUgMi42NDctMS4z NDYgMS43NzEtMi42MDcgMi42NTItMy43ODMgMi42NTItMi4wMiAwLTQuNjI5 LTIuMTg2LTcuODIyLTYuNTYzLTEuNTE2LTIuMTg0LTMuODMtNS40MjQtNi45 NDEtOS43MTUgMS45MzQgMS4wMTIgMy44NjkgMi4wMiA1LjgwNSAzLjAzMSAy LjUyMyAxLjE3NiA0LjU0MSAxLjc2NiA2LjA1NyAxLjc2NiAxLjE3OCAwIDIu MzM0LTEuMDMxIDMuNDY5LTMuMDkyIDEuMTM1LTIuMDYxIDIuNjI5LTMuMDky IDQuNDc5LTMuMDkyLjI1NCAwIDEuOTM2LjUwNCA1LjA0NyAxLjUxNiAxLjU5 Ni0yLjQzOSAyLjM5OC00LjI0OCAyLjM5OC01LjQyNiAwLTEuMDEtLjYxMS0y LjE2Ni0xLjgzLTMuNDcxLTEuMjIxLTEuMzAzLTIuMzM0LTEuOTU1LTMuMzQ0 LTEuOTU1LS40MjIgMC0xLjA3Mi4xMjUtMS45NTcuMzc5LS44ODEuMjUyLTEu NTMzLjM3OS0xLjk1My4zNzktMS41MTYgMC0yLjI3My0xLjg5My0yLjI3My01 LjY3OCAwLTEuMDEuOTY5LTYuNzcgMi45MDQtMTcuMjg1LS4wODYgMS4yNi40 NjEgMy42MTcgMS42MzkgNy4wNjQgMS40MyA0LjIwNyAzLjExMSA2LjMwOSA1 LjA0OSA2LjMwOS4zMzQgMCAxLjAwOC0uMjUyIDIuMDE4LS43NTggMS4wMDgt LjUwNCAxLjgwNy0uNzU0IDIuMzk2LS43NTQgMS45MzQgMCAzLjUzMSAxLjA5 NCA0Ljc5NSAzLjI3N2wxLjg5MyAzLjQwNmMxLjc2NiAwIDMuMjM4LS42Mjkg NC40MTQtMS44OTEgMS4xNzgtMS4yNjIgMS43NjgtMi43NzcgMS43NjgtNC41 NDMgMC0xLjg1LS43NzctMy4yNi0yLjMzNC00LjIyNy0xLjU1OS0uOTY3LTIu MzM2LTEuNzAzLTIuMzM2LTIuMjA3IDAtMS43NjggMi43NzctNC43NTIgOC4z MjgtOC45NTggNC40NTctMy4zNjMgNy4zNTktNS4zNCA4LjcwNy01LjkzLTMu NjE3IDQuODc5LTUuNDI2IDguNDUxLTUuNDI2IDEwLjcyNCAwIDEuMTc4Ljcx MyAyLjQ0MSAyLjE0NSAzLjc4NSAxLjc2NiAxLjU5OCAyLjc3NSAyLjczNCAz LjAyNyAzLjQwNi44NCAxLjkzOC43NTYgNC41ODYtLjI1MiA3Ljk0OSAyLjI3 MSAxLjYgMy45OTQgMi4zOTYgNS4xNzQgMi4zOTYgMi40MzYgMCAzLjY1OC0x LjI2NCAzLjY1OC0zLjc4NSAwLS4yNTItLjEwNS0xLjA1MS0uMzE0LTIuMzk2 LS4yMTMtMS4zNDQtLjI3My0yLjEwMi0uMTkxLTIuMjcxLjMzNi0xLjE3OCAy LjY1LTEuNzY4IDYuOTM5LTEuNzY4IDIuNjkxIDAgOC4yODMuNzU4IDE2Ljc4 MSAyLjI3My0xLjg1Mi41MDQtNC42MjcgMS4yNi04LjMyNiAyLjI3LTMuMzY1 IDEuMDEtNS4wNDkgMi4xNDUtNS4wNDkgMy40MDYgMCAuNTkuMjA5IDEuNTk4 LjYzMSAzLjAyNy40MiAxLjQzMi42MzMgMi40OC42MzMgMy4xNTYgMCAxLjE3 Ni0uNzU4IDIuMjctMi4yNzEgMy4yNzdsLTQuMjkxIDMuMDMxYzEuMDEgMS44 NTIgMS42ODIgMi45NDUgMi4wMiAzLjI3OS44NCAxLjAwOCAxLjk3NSAxLjUx NCAzLjQwNiAxLjUxNCAxLjAxIDAgMS45MzQtLjg4MyAyLjc3NS0yLjY0OC44 NC0xLjc2OCAyLjE4OC0yLjY1IDQuMDM3LTIuNjUgMi4yNyAwIDQuODM4IDIu MTA0IDcuNjk3IDYuMzExIDEuNTkzIDIuMzYgNC4wNzUgNS45MzMgNy40NCAx MC43Mjd6bS0yOC4wMDctNy4zMTZjMC01LjM4MS0xLjk3OS0xMC4wNTEtNS45 MzItMTQuMDA2LTMuOTUzLTMuOTUzLTguNjIxLTUuOTMtMTQuMDA0LTUuOTMt NS40NjkgMC0xMC4xOCAxLjk1Ny0xNC4xMzEgNS44NjktMy45NTMgMy45MS01 Ljk3MyA4LjYtNi4wNTUgMTQuMDY2LS4wODYgNS4zODMgMS45MTIgMTAuMDMg NS45OTIgMTMuOTM4IDQuMDggMy45MTIgOC44MTEgNS44NjkgMTQuMTkzIDUu ODY5IDUuNzE5IDAgMTAuNDkyLTEuODczIDE0LjMxOC01LjYxNSAzLjgzLTMu NzQgNS43MDEtOC40NyA1LjYxOS0xNC4xOTF6bS0xLjg5MyAwYzAgNS4xMzEt MS43MjUgOS4zODEtNS4xNzQgMTIuNzQtMy40NTEgMy4zNjctNy43NCA1LjA0 OS0xMi44NjkgNS4wNDktNC45NjMgMC05LjIxMS0xLjcyMy0xMi43NDItNS4x NzQtMy41MzEtMy40NDUtNS4yOTktNy42NTItNS4yOTktMTIuNjE1IDAtNC44 NzcgMS43ODUtOS4wNjQgNS4zNTktMTIuNTUzIDMuNTc4LTMuNDkgNy44MDMt NS4yMzggMTIuNjgyLTUuMjM4IDQuODc3IDAgOS4xMDQgMS43NjYgMTIuNjgg NS4zMDEgMy41NzQgMy41MzMgNS4zNjMgNy42OTUgNS4zNjMgMTIuNDl6JyBm aWxsPScjMEQwRjBGJy8+PC9nPjwvc3ZnPgo= ");
+    }
+
+    .card-symbol-U {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdC b3g9JzAgMCAxMDAgMTAwJz48ZyBmaWxsPSdub25lJz48Y2lyY2xlIGZpbGw9 JyNDMUQ3RTknIGN4PSc1MCcgY3k9JzUwJyByPSc1MCcvPjxwYXRoIGQ9J002 Ny40ODggODMuNzE5Yy00Ljc4NyA0Ljg3MS0xMC42ODQgNy4zMDctMTcuNjg4 IDcuMzA3LTcuODYxIDAtMTQuMDk4LTIuNjktMTguNzExLTguMDczLTQuMzU5 LTUuMTI3LTYuNTM3LTExLjY2Mi02LjUzNy0xOS42MDYgMC04LjU0MyAzLjcx Ny0xOC4yODYgMTEuMTUtMjkuMjI0IDYuMDY0LTguOTY5IDEzLjE5OS0xNi44 MyAyMS40MDItMjMuNTgtMS4xOTcgNS40NjktMS43OTMgOS4zNTUtMS43OTMg MTEuNjYyIDAgNS4yOTkgMS42NjQgMTAuNDY3IDQuOTk2IDE1LjUwOCA0LjEw MiA1Ljk4IDcuMjE5IDEwLjQyNiA5LjM1NyAxMy4zMjggMy4zMzIgNS4wNDMg NC45OTggOS45NTUgNC45OTggMTQuNzM3LjAwMiA3LjA5My0yLjM5MSAxMy4w NzQtNy4xNzQgMTcuOTQxem0tLjEyOS0yNy4zNjJjLTEuMjgxLTIuODYxLTIu Nzc3LTQuNzYyLTQuNDg2LTUuNzAzLjI1Ni41MTQuMzg1IDEuMjQuMzg1IDIu MTggMCAxLjc5NS0uNTEyIDQuMzU3LTEuNTM5IDcuNjg5bC0xLjY2NCA1LjEy N2MwIDIuOTkgMS40OTIgNC40ODYgNC40ODQgNC40ODYgMy4xNiAwIDQuNzQy LTIuMDk1IDQuNzQyLTYuMjgxIDAtMi4xMzQtLjY0LTQuNjMyLTEuOTIyLTcu NDk4eicgZmlsbD0nIzBEMEYwRicvPjwvZz48L3N2Zz4K ");
+    }
+
+    .card-symbol-B {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdC b3g9JzAgMCAxMDAgMTAwJz48ZyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgwIC0x KScgZmlsbD0nbm9uZSc+PGNpcmNsZSBmaWxsPScjQkFCMUFCJyBjeD0nNTAn IGN5PSc1MC45OTgnIHI9JzUwJy8+PHBhdGggZD0nTTkwLjY5NSA0OS42MTlj MCA1LjUxOC0yLjAwOCA5LjI4MS02LjAyIDExLjI4Ny0xLjE3Mi41ODYtNC44 NSAxLjM3OS0xMS4wMzcgMi4zODMtNC4wMTIuNjctNi4wMTggMi4yMTctNi4w MTggNC42Mzl2MTAuMTU4YzAgLjQyMi4xMjUgMS43MTUuMzc1IDMuODg5bC4z NzcgNC4wMTRjMCAxLjI1NS0uMjkzIDMuMzA2LS44NzkgNi4xNDYtMS41ODgu MzM0LTMuNDI4LjcwOS01LjUxOCAxLjEzMi0uNjctMi41MTEtMS4wMDQtNC4y MjQtMS4wMDQtNS4xNDYgMC0uNDE2LjEwNS0xLjA0NS4zMTMtMS44ODIuMjA3 LS44MzQuMzE2LTEuNDYxLjMxNi0xLjg4MyAwLS41OC0uNTItMi4yMTMtMS41 NTktNC44ODdoLTEuOTQ1Yy0uMjU4LjQxOC0uMzQ0Ljk2MS0uMjYgMS42Mjku MzM0IDEuNDIyLjQ1OSAyLjYzMy4zNzcgMy42MzctMS40MjIgMS4wMDQtMy4z ODcgMi4zNDEtNS44OTUgNC4wMTMtLjU4Ni0uMTY2LS43OTMtLjI1LS42Mjkt LjI1di04LjkwNGMtLjE2NC0uNDE2LS41ODQtLjU4MS0xLjI1NC0uNTAyaC0x LjUwNGwtMS41MDQgMTEuNzg3Yy0xLjE3NC4wODQtMi41OTIuMDg0LTQuMjY0 IDAtLjU4OC0yLjc1OC0xLjYzMS02Ljg1My0zLjEzNS0xMi4yODloLTEuMDA0 Yy0uOTIyIDIuOTI5LTEuNDIyIDQuNTE5LTEuNTA2IDQuNzY5IDAgLjMzNC4x MDQuOTgxLjMxNCAxLjk0Mi4yMDcuOTYyLjMxMyAxLjYwOS4zMTMgMS45NDMg MCAuMjUtLjA4NC44NzctLjI1IDEuODgxbC0uMzc3IDMuMDFjLS4xNjguMTY2 LS4zNzcuMjUtLjYyNy4yNS0yLjUwOCAwLTQuMTgyLS42MjctNS4wMTYtMS44 NzktLjgzNi0xLjI1Ni0xLjE3Mi0zLjAxMi0xLjAwNC01LjI3MWwxLjAwNC0x NS4wNDdjMC0uMjUyLjA4Mi0uNTg2LjI1LTEuMDA0LjE2NC0uNDE4LjI1LS43 MTEuMjUtLjg3NyAwLS42Ny0uNzExLTIuMDA4LTIuMTMxLTQuMDE0LS4yNDgt LjA4Mi0xLjU0OS0uMzc3LTMuODg3LS44NzktMS40MjQtLjMzNC00LjIyNS0u OTE4LTguNDAyLTEuNzU2LTUuNzcxLTEuMDg0LTguNjU0LTUuNzI1LTguNjU0 LTEzLjkyIDAtMTIuMjA3IDUuMDE4LTIyLjM2NSAxNS4wNTEtMzAuNDc1LjQx NCAyLjI1OCAxLjEyNyA1LjI2NiAyLjEyOSA5LjAyOS43NTQuMTcgMi4zODUu NTQ1IDQuODkxIDEuMTI5LjUwNC4xNjggMy4wNTMgMS4wODggNy42NTIgMi43 Ni0yLjM0NC0xLjQyMi01LjM5My0zLjcxOS05LjE1Ni02Ljg5OC0xLjQyMi0x LjY3Mi0yLjEzMy00LjQ3MS0yLjEzMy04LjQgMC0uOTIgMS41OS0yLjAwOCA0 Ljc2OC0zLjI2NCAyLjg0LTEuMTcgNC45NzUtMS44MzYgNi4zOTYtMi4wMDYg NC41MTQtLjU4MiA3Ljk4NC0uODc5IDEwLjQxLS44NzkgMTAuNDQ5IDAgMTgu ODkxIDIuNjc4IDI1LjMyOCA4LjAyOS0yLjA4OCAyLjQyNi01LjY4NCA1LjAx NC0xMC43ODMgNy43NzMgMi4wMDguMDg0IDQuOTM0LS43MDcgOC43NzktMi4z ODMgMy44NDQtMS42NyA1LjQ3NS0yLjUwOCA0Ljg5MS0yLjUwOC42NjggMCAy LjAwOCAxLjM0IDQuMDE0IDQuMDE0IDEuNTA0IDIuMDA2IDIuNzE1IDMuODA3 IDMuNjM3IDUuMzkxIDIuNjc0IDQuNzY4IDQuNDcxIDkuOTA4IDUuMzkzIDE1 LjQyNiAwIDEuOTI2LjA0MSAzLjMwNS4xMjUgNC4xMzl2MS4wMDRoLjAwMnpt LTQ4LjAzMSAyLjI1OGMwLTMuNTk0LTEuNTY4LTcuMDAyLTQuNzAzLTEwLjIy My0zLjEzNy0zLjIxOS02LjUwMi00LjgyNi0xMC4wOTYtNC44MjYtMy4xNzgg MC01Ljk3NyAxLjM0OC04LjQwMiA0LjAzOS0yLjQyNiAyLjY5My0zLjYzNyA1 LjY4Mi0zLjYzNyA4Ljk2MyAwIDIuODU5IDEuMzc5IDQuNzEzIDQuMTM5IDUu NTUzIDEuNzU2LjUwNiA0LjIxOS44MDEgNy4zOTguODgzaDYuODk4YzUuNTk4 LjA4NCA4LjQwMy0xLjM3OSA4LjQwMy00LjM4OXptMTMuNjY4IDE1LjU1M3Yt My44ODljLS41ODQtMS4wODYtMS4xNy0yLjIxNS0xLjc1NC0zLjM4Ny0uNTAy LTEuNjc0LTEuNDIyLTQuMDE0LTIuNzYtNy4wMjVsLTEuMzgxIDE0LjY3NGMw IDEuMTcyLS4yNSAxLjc1Ni0uNzUyIDEuNzU2LS4zMzQgMC0uNTg0LS4wODIt Ljc1Mi0uMjQ4LS41ODYtOC44NjMtLjg3OS0xMi43MDktLjg3OS0xMS41NDF2 LTQuMzg3Yy0uMTY4LS4yNTQtLjM3NS0uMzc5LS42MjUtLjM3OS0yLjg0NCAy LjkzLTQuMjY0IDcuNjUyLTQuMjY0IDE0LjE3MiAwIDMuNTk2LjMzIDUuODEx IDEuMDAyIDYuNjQ4LjY3LS4xNjYgMS40MjItLjQ1OSAyLjI1OC0uODc3LjMz NC0uMTY4IDEuMjk1LS4yNTIgMi44ODctLjI1MiAxLjU4NCAwIDMuNTEuNTAy IDUuNzY2IDEuNTA0LjgzNiAwIDEuMjU0LTIuMjU2IDEuMjU0LTYuNzY5em0y OC4zNDQtMTcuNDc1YzAtMy4zNjctMS4yNTQtNi4zNzUtMy43NjItOS4wMjUt Mi41MS0yLjY0OC01LjM5NS0zLjk3NS04LjY1Mi0zLjk3NS0zLjUxMiAwLTYu Nzk1IDEuNjA3LTkuODQ2IDQuODI2LTMuMDUzIDMuMjE5LTQuNTc4IDYuNTg0 LTQuNTc4IDEwLjA5NiAwIDIuOTI4IDEuNDIgNC4zODkgNC4yNjQgNC4zODlo MTQuNDIyYzUuNDMzLS4wODIgOC4xNTItMi4xODYgOC4xNTItNi4zMTF6JyBm aWxsPScjMEQwRjBGJy8+PC9nPjwvc3ZnPgo= ");
+    }
+
+    .card-symbol-R {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdC b3g9JzAgMCAxMDAgMTAwJz48ZyBmaWxsPSdub25lJz48Y2lyY2xlIGZpbGw9 JyNFNDk5NzcnIGN4PSc1MCcgY3k9JzUwJyByPSc1MCcvPjxwYXRoIGQ9J005 MS45NjUgNjYuNjE3Yy0zLjczNiA4LjkxMi0xMS4xNiAxMy4zNjctMjIuMjc1 IDEzLjM2Ny0yLjAzNyAwLTQuMjQ2LjI1NC02LjYyMS43NjItMy41NjQuNzY0 LTUuMzQ2IDEuODI4LTUuMzQ2IDMuMTg2IDAgLjQyNC4yOTUuOTEuODkxIDEu NDYzLjU5Mi41NTMgMS4xMDQuODI2IDEuNTI3LjgyNi0yLjEyMyAwLS42OC4w NjQgNC4zMjYuMTkxIDUuMDA4LjEyNyA4LjE0OC4xOTEgOS40MjIuMTkxLTcu MzgzIDQuMzI2LTE5LjczMiA2LjMxOS0zNy4wNDMgNS45ODEtNS42ODgtLjA4 NC0xMC41NjYtMi41ODgtMTQuNjM5LTcuNTEtMy45OTItNC42NjktNS45ODQt OS44ODgtNS45ODQtMTUuNjU4IDAtNi4xMDggMi4wNTctMTEuMzA4IDYuMTc2 LTE1LjU5NSA0LjExMy00LjI4MiA5LjIyOS02LjQyNyAxNS4zMzgtNi40Mjcg MS4zNTcgMCAzLjE2LjI5NyA1LjQxLjg5MSAyLjI0OC41OTQgMy43NTYuODkx IDQuNTE4Ljg5MSAzLjEzOSAwIDcuMDQ1LTEuMjkzIDExLjcxMy0zLjg4MyA0 LjY2Ni0yLjU4OCA2Ljg3NS0zLjg4MyA2LjYyMS0zLjg4My0uODUgOC45MTIt My44MiAxNC44OTYtOC45MTQgMTcuOTQ4LTMuNjQ4IDIuMTIzLTUuNDczIDQu MjAxLTUuNDczIDYuMjM2IDAgMS4yNzMuNzY0IDIuMjkzIDIuMjkxIDMuMDU3 IDEuMTg4LjU5NSAyLjUwMi44OTIgMy45NDUuODkyIDIuMjA3IDAgNC4zNzEt MS4zNTYgNi40OTQtNC4wNzEgMi4xMTktMi43MTggMy4wNTUtNS4xNzcgMi44 MDEtNy4zODYtLjI1NC0yLjU0NS0uMDg0LTUuNjAzLjUxLTkuMTY0LjE2OC0x LjAyLjc4My0yLjI3IDEuODQ0LTMuNzU0IDEuMDYxLTEuNDg2IDIuMDE2LTIu Mzk4IDIuODY1LTIuNzM4IDAgLjc2Mi0uMjc1IDIuMDM3LS44MjggMy44MTgt LjU1MyAxLjc4MS0uODI2IDMuMS0uODI2IDMuOTQ3IDAgMS44NjcuNTA4IDMu MzA5IDEuNTI3IDQuMzI2IDEuNTI1LS41OTIgMi44ODMtMi41MDIgNC4wNzQt NS43MjkgMS4wMTYtMi40NTkgMS42MDktNC44MzYgMS43ODEtNy4xMjctMy41 NjYtLjE3LTYuOTgyLTEuNzgxLTEwLjI0OC00LjgzOC0zLjI2OC0zLjA1Ny00 LjktNi4zNjUtNC45LTkuOTI4IDAtLjU5NC4wODItMS4xODguMjU2LTEuNzgz LjUwOC43NjQgMS4yNzEgMS45NTMgMi4yODkgMy41NjQgMS40NDMgMi4xMjEg Mi41NDcgMy4xODIgMy4zMTMgMy4xODIgMS4wMTYgMCAxLjUyNS0xLjA2MSAx LjUyNS0zLjE4MiAwLTIuNzE1LS43MjMtNS4xNzYtMi4xNjQtNy4zODMtMS42 MTMtMi42MzEtMy42OTMtMy45NDctNi4yMzgtMy45NDctMS4xODkgMC0yLjk3 MS42MzctNS4zNDQgMS45MS0yLjM3OSAxLjI3MS00LjU0MyAxLjkxLTYuNDky IDEuOTEtLjU5NiAwLTMuMjI5LS43NjYtNy44OTUtMi4yOTMgOC4yMy0xLjM1 NSAxMi4zNDgtMi41ODYgMTIuMzQ4LTMuNjkxIDAtMi44ODUtNS42NDUtNC44 MzgtMTYuOTMtNS44NTUtMS4xMDUtLjA4NC0zLjE0MS0uMjU0LTYuMTExLS41 MS4zMzgtLjQyNCAyLjc1OC0uODkxIDcuMjU4LTEuNCAzLjgxOC0uNDIyIDYu NDkyLS42MzcgOC4wMTgtLjYzNyAyMC4xOTcgMCAzMy4wMTIgOS44MDUgMzgu NDQzIDI5LjQwOC45MzQtLjc3MyAxLjQwMi0yLjA2NiAxLjQwMi0zLjg3MSAw LTIuMzI0LS42OC01LjI1LTIuMDM3LTguNzc3LS41MTItMS4zNzUtMS4zMTgt My40NDEtMi40Mi02LjE5MyA2Ljk1NyA4Ljg2NyAxMC40MzkgMTcuMjcgMTAu NDM5IDI1LjE5OSAwIDQuMTc4LS45NzkgNy45NzMtMi45MyAxMS4zODEtMS4y NyAyLjMwMy0zLjY1IDUuMjQ0LTcuMTI3IDguODI2LTMuNDggMy41OC01Ljg1 NyA2LjM1Mi03LjEzMSA4LjMxMyA0LjY2OC0xLjI3MSA3LjcyNS0yLjI0OCA5 LjE2OC0yLjkyOCAzLjIyMy0xLjQ0IDYuMTUtMy42MDYgOC43ODMtNi40OTIg MCAxLjEwNi0uNDY3IDIuNzYyLTEuNCA0Ljk2N3ptLTU1LjUwMi01MC4wMjVj MCAxLjUyNS0uODUgMi41MDItMi41NDUgMi45MjZsLTMuMzExLjUxYy0xLjE4 OS41OTQtMi45MjggMi45MjgtNS4yMTkgNy0uMjU2LTEuMjcxLS42MzctMy4w NTMtMS4xNDYtNS4zNDYtLjc2NC4wODYtMi4wMzUuNzY0LTMuODE4IDIuMDM3 LS43NjQuNTk0LTEuOTk2IDEuNDg0LTMuNjkzIDIuNjcyLjUxMi0zLjA1NSAy LjIwNy02LjE0OCA1LjA5NC05LjI5MyAzLjA1NS0zLjQ3NyA2LjAyNS01LjIx NyA4LjkxLTUuMjE3IDMuODE4IDAgNS43MjggMS41NzIgNS43MjggNC43MTF6 bTIyLjE1IDExLjcwOWMwIDEuNDQzLS43ODUgMi42NTQtMi4zNTUgMy42Mjkt MS41Ny45NzctMy4xMTkgMS40NjUtNC42NDYgMS40NjUtMi4wMzcgMC0zLjg2 My0xLjE0Ni01LjQ3My0zLjQzOC0xLjk1NS0yLjgwMS0zLjk0Ny00LjYyNS01 Ljk4NC01LjQ3Ny40MjQtLjQyMi45MzQtLjYzNSAxLjUyOS0uNjM1Ljc2NCAw IDIuMDU1LjU5NCAzLjg4MSAxLjc4MSAxLjgyNCAxLjE4OSAyLjk5IDEuNzgz IDMuNTAyIDEuNzgzLjQyNCAwIDEuMTIzLS41OTQgMi4xLTEuNzgzLjk3NS0x LjE4OCAyLjA1Ny0xLjc4MSAzLjI0Ni0xLjc4MSAyLjguMDAxIDQuMiAxLjQ4 NyA0LjIgNC40NTZ6JyBmaWxsPScjMEQwRjBGJy8+PC9nPjwvc3ZnPgo= ");
+    }
+
+    .card-symbol-G {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdC b3g9JzAgMCAxMDAgMTAwJz48ZyBmaWxsPSdub25lJz48cGF0aCBkPSdNMTAw IDQ5Ljk5OGMwIDI3LjYxNS0yMi4zODUgNTAuMDAyLTUwLjAwMiA1MC4wMDIt MjcuNjEzIDAtNDkuOTk4LTIyLjM4Ny00OS45OTgtNTAuMDAyIDAtMjcuNjEz IDIyLjM4NS00OS45OTggNDkuOTk4LTQ5Ljk5OCAyNy42MTcgMCA1MC4wMDIg MjIuMzg1IDUwLjAwMiA0OS45OTh6JyBpZD0nU2hhcGUnIGZpbGw9JyNBM0Mw OTUnLz48cGF0aCBkPSdNOTMuNzYyIDU2LjIyNWMwIDEuNjY4LS42NDUgMy4x NjQtMS45MzYgNC40OTgtMS4yODkgMS4zMzItMi43NyAxLjk5OC00LjQzNiAx Ljk5OC0yLjY2MiAwLTQuNjIzLTEuMjUtNS44NjktMy43NDhsLTUuODcxLS4y NWMtMS4yNTIgMC0zLjcwOS41NDMtNy4zNzEgMS42MjUtMy45MTQgMS4wODIt Ni4xNjQgMS45NTctNi43NDYgMi42MjMtLjkxNi45OTgtMS42NjQgMy4zMzIt Mi4yNDggNi45OTYtLjUwMiAyLjk5OC0uNzQ4IDUuMjA1LS43NDggNi42MjEg MCAyLjI0Ni4zNTIgMy44OTMgMS4wNjEgNC45MzQuNzA5IDEuMDQxIDIuMTY2 IDEuOTE2IDQuMzcxIDIuNjIzIDIuMjA1LjcwNyAzLjU2MSAxLjEwNCA0LjA2 MSAxLjE4Ny4zMzIgMCAuODczLS4wNDEgMS42MjUtLjEyNWgxLjQ5OGMxLjA4 IDAgMi4yMDUuMTcgMy4zNzMuNSAxLjY2Ni41IDIuMzc1IDEuMTY2IDIuMTI1 IDItMS4xNjgtLjE2Ni0zLjIwNy4wODQtNi4xMjEuNzVsMy40OTYgMS43NDhj MCAxLTEuNDE2IDEuNDk4LTQuMjQ2IDEuNDk4LS43NTIgMC0xLjc3MS0uMTY2 LTMuMDYzLS40OTgtMS4yOTEtLjMzNi0yLjE0NS0uNS0yLjU1OS0uNWgtMS42 MjVjLS4wODIuODMyLS4zMzQgMi4wOC0uNzUgMy43NDYtMS40MTgtLjA4NC0z LjA4LS45MTgtNC45OTYtMi40OTgtMS45MTgtMS41OC0zLjEyMy0yLjM3My0z LjYyMS0yLjM3My0uNTAyIDAtMS4yMTEuNzkzLTIuMTI1IDIuMzczLS45MTgg MS41OC0xLjM3NSAyLjY2NC0xLjM3NSAzLjI0OC0xLjA4Mi0uNTg0LTEuOTk2 LTEuNjY4LTIuNzUtMy4yNDgtLjMzMi0xLjA4NC0uNzA3LTIuMTY2LTEuMTIx LTMuMjQ4LS44MzIuMDg0LTIuMzc1IDEuODM0LTQuNjIxIDUuMjQ4aC0uNjI3 Yy0uMTY2LS4yNTItLjc5NS0yLTEuODczLTUuMjQ4LTIuNTgyLS44MzItNC45 OTYtMS4yNDgtNy4yNDYtMS4yNDgtMS4wODIgMC0yLjc0OC4yNS00Ljk5Ni43 NDhsLTMuNDk2LS4yNDhjLjQ5OC0uNSAxLjk1NS0xLjQ1NyA0LjM3MS0yLjg3 MyAyLjgzLTEuNjY2IDQuOTk2LTIuNSA2LjQ5Ni0yLjUuMjQ2IDAgLjU3OC4w NDMgMSAuMTI1LjQxNC4wODYuNzUuMTI1IDEgLjEyNS41NzggMCAxLjUxOC0u MzEyIDIuODA5LS45MzggMS4yOTEtLjYyMyAyLjAzOS0xLjE4NiAyLjI0Ni0x LjY4NC4yMTEtLjUwNC4zMTYtMS43OTMuMzE2LTMuODc1IDAtNC43NDYtMS4y NS04LjI4NS0zLjc1LTEwLjYxNy0yLjE2OC0yLjA4Mi01Ljc0Ni0zLjU4LTEw Ljc0NC00LjQ5OC0xLjMzMiA0Ljc0Ni01LjA4IDcuMTIzLTExLjI0IDcuMTIz LTIgMC0zLjk5OC0xLjIwNy01Ljk5Ni0zLjYyMy0xLjk5Ni0yLjQxNi0yLjk5 Ni00LjYyMy0yLjk5Ni02LjYyMSAwLTMuMDgyIDEuMjg3LTUuNjIxIDMuODY5 LTcuNjIzLTIuMDgtMi4xNjItMy4xMjEtNC4zNjktMy4xMjEtNi42MTcgMC0y LjA4NC42NDMtMy45MTQgMS45MzYtNS41IDEuMjkxLTEuNTc4IDIuOTc3LTIu NDk2IDUuMDU5LTIuNzQ4LS4xNjYtMi42NjIuNzA3LTQuNDk2IDIuNjIzLTUu NDk2LS45MTYtLjkxNC0xLjM3My0yLjUzNy0xLjM3My00Ljg2OSAwLTIuNzQ4 LjkxNi01LjAzOSAyLjc0OC02Ljg3MSAxLjgzLTEuODMyIDQuMTIxLTIuNzUg Ni44NjktMi43NSAzIDAgNS40NTcgMS4wNDUgNy4zNzEgMy4xMjUgMi40MTYt OC4yNDQgNy42MjEtMTIuMzY3IDE1LjYxMy0xMi4zNjcgNC4xNjQgMCA3Ljgy OCAxLjY2NiAxMC45OTQgNC45OTggMS4xNjYgMS4yNDggMS43NDggMS45MTYg MS43NDggMS45OTYtMSAwLS40OTgtLjE4OCAxLjUtLjU2MSAxLjk5Ni0uMzc1 IDMuNDUzLS41NjMgNC4zNzMtLjU2MyAzLjI0NiAwIDYuMTE5IDEuMjA3IDgu NjE5IDMuNjIzIDIuMTY0IDIuMTY2IDMuNjY0IDQuOTEyIDQuNDk4IDguMjQ0 LjU4LjA4NCAxLjQ5OC4zMzIgMi43NDguNzQ4IDEuODMuOTIgMi43NDggMi40 OTggMi43NDggNC43NDggMCAuNDE4LS4zMzYgMS4yMDktMSAyLjM3MyA1LjMy OCAyLjk5OCA3Ljk5NCA3LjE2MiA3Ljk5NCAxMi40OTIgMCAxLjQ5OC0uNTgy IDMuNTg0LTEuNzQ4IDYuMjQ3IDIuMTY2IDEuMjQ3IDMuMjQ2IDMuMDgxIDMu MjQ2IDUuNDk1em0tNTEuNDY3IDUuNDk2di0xLjYyM2MwLTEuOTE0LS45MzYt My42NjQtMi44MDktNS4yNDYtMS44NzUtMS41ODItMy43Ny0yLjM3My01LjY4 NC0yLjM3My0yLjMzNCAwLTQuNDk2LjU0MS02LjQ5NiAxLjYyMSA0LjQxMy0u MjQ4IDkuNDExIDIuMjkzIDE0Ljk4OSA3LjYyMXptLTIuMjQ2LTE1LjQ4OWMt MS4yNS0xLjQxOC0yLjMzMi0yLjg3NS0zLjI1LTQuMzczLTMuNDk4LjkxNi01 LjI0NiAxLjk1Ny01LjI0NiAzLjEyMSAxLS4wOCAyLjQ1Ny4xMDUgNC4zNzEu NTY0IDEuOTE0LjQ1OSAzLjI5MS42ODggNC4xMjUuNjg4em03LjYyMS0zLjg3 M3YtNS40OTZjLTItLjMzMi0zLjIxMS0uNS0zLjYyMy0uNXYxLjg3M2wzLjYy MyA0LjEyM3ptMTYuMjM4LTMuNDk4Yy0xLS40MTYtMi44NzUtMS4yNS01LjYy MS0yLjQ5OHYxMC43NDJjMy45MTItMi4yNSA1Ljc4NS00Ljk5OCA1LjYyMS04 LjI0NHptNi44NjcgMTQuNzQxbC0yLjc0Ni0zLjM3M2MtMS42NjQgMS4xNjct My4zNTIgMi4zNTQtNS4wNjEgMy41NjEtMS43MDkgMS4yMDctMy4xODYgMi41 NjMtNC40MzIgNC4wNiAzLjc0Ny0yLjAwMiA3LjgyOS0zLjQxNCAxMi4yMzkt NC4yNDh6JyBmaWxsPScjMEQwRjBGJy8+PC9nPjwvc3ZnPgo= ");
+    }
 </style>
 
 <body>
@@ -83,8 +122,36 @@
                     href="https://scryfall.com/search?q=is%3Acommander+o%3Apartner+-o%3A%22partner+with%22+t%3Aplaneswalker&unique=cards&as=grid&order=name"
                     title="List of planeswalkers commander with partner">planeswalkers</a> </label>
         </div>
-    </div>
 
+        <div class="flex">
+            <div style="margin-right: 0.5em;">Keep</div>
+            <div>
+                <input type="checkbox" name="w" id="w" checked="">
+                <label for="w" style="margin-right: 0.2em;"><abbr title="one white mana"
+                        class="card-symbol card-symbol-W">{W}</abbr></label>
+            </div>
+            <div>
+                <input type="checkbox" name="u" id="u" checked="">
+                <label for="u" style="margin-right: 0.2em;"><abbr title="one blue mana"
+                        class="card-symbol card-symbol-U">{U}</abbr></label>
+            </div>
+            <div>
+                <input type="checkbox" name="b" id="b" checked="">
+                <label for="b" style="margin-right: 0.2em;">
+                    <abbr title="one black mana" class="card-symbol card-symbol-B">{B}</abbr></label>
+            </div>
+            <div>
+                <input type="checkbox" name="r" id="r" checked="">
+                <label for="r" style="margin-right: 0.2em;"><abbr title="one red mana"
+                        class="card-symbol card-symbol-R">{R}</abbr></label>
+            </div>
+            <div>
+                <input type="checkbox" name="g" id="g" checked="">
+                <label for="g" style="margin-right: 0.2em;"><abbr title="one green mana"
+                        class="card-symbol card-symbol-G">{G}</abbr></label>
+            </div>
+        </div>
+    </div>
     <button id="danceButton" type="button" class="center">
         dance
     </button>
@@ -94,7 +161,8 @@
 <script>
     // https://scryfall.com/search?q=is%3Acommander+o%3Apartner+-o%3A%22partner+with%22&order=name&as=checklist&unique=cards
 
-    // copy([...document.querySelectorAll('#js-checklist > tbody:nth-child(2) > tr')].map(x => {
+    // copy(
+    // [...document.querySelectorAll('#js-checklist > tbody:nth-child(2) > tr')].map(x => {
     // const type = x.querySelector("td:nth-child(5) > a");
     // return {
     // id: x.dataset.cardId,
@@ -102,8 +170,10 @@
     // img: x.dataset.cardImage,
     // name: x.querySelector('td:nth-child(3) > a').textContent.trim(),
     // planeswalker: type.textContent.includes("Planeswalker"),
-    // rarity: x.querySelector("td:nth-child(6) > a").textContent.trim()
-    // };}))
+    // rarity: x.querySelector("td:nth-child(6) > a").textContent.trim(),
+    // colors: [...new Set(x.querySelector("td:nth-child(4) > a").textContent.trim().split('').filter(c => 'WUBRG'.includes(c)))]
+    // };})
+    // )
 
     const _partners = [
         {
@@ -112,7 +182,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/3/b/3b951e0c-a4dd-4a20-87c6-eaa947e33aa4.jpg?1606762145",
             "name": "Akiri, Line-Slinger",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "R",
+                "W"
+            ]
         },
         {
             "id": "c0bdd07d-9fb9-4ee4-80db-494ee0cba58d",
@@ -120,7 +194,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/c/0/c0bdd07d-9fb9-4ee4-80db-494ee0cba58d.jpg?1604534740",
             "name": "Akroma, Vision of Ixidor",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "W"
+            ]
         },
         {
             "id": "90c51949-b1ef-4c6e-98b0-4fb33a81db24",
@@ -128,7 +205,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/9/0/90c51949-b1ef-4c6e-98b0-4fb33a81db24.jpg?1598141150",
             "name": "Alena, Kessig Trapper",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "R"
+            ]
         },
         {
             "id": "2047bfa4-3f4d-47bd-9484-545686f15b75",
@@ -136,7 +216,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/2/0/2047bfa4-3f4d-47bd-9484-545686f15b75.jpg?1604600678",
             "name": "Alharu, Solemn Ritualist",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "W"
+            ]
         },
         {
             "id": "9a67cfaa-990c-4dcb-97a9-9c5d7316cabe",
@@ -144,7 +227,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/9/a/9a67cfaa-990c-4dcb-97a9-9c5d7316cabe.jpg?1604536715",
             "name": "Anara, Wolvid Familiar",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "G"
+            ]
         },
         {
             "id": "728b802c-969b-4865-b7a0-871c585d097a",
@@ -152,7 +238,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/7/2/728b802c-969b-4865-b7a0-871c585d097a.jpg?1604153410",
             "name": "Ardenn, Intrepid Archaeologist",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "W"
+            ]
         },
         {
             "id": "d5f69e24-6b5c-4a9a-af5b-1ce88efdc0aa",
@@ -160,7 +249,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/d/5/d5f69e24-6b5c-4a9a-af5b-1ce88efdc0aa.jpg?1604153742",
             "name": "Armix, Filigree Thrasher",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "B"
+            ]
         },
         {
             "id": "83e8fe2e-ec6c-47fc-85c0-6eec185ecdce",
@@ -168,7 +260,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/8/3/83e8fe2e-ec6c-47fc-85c0-6eec185ecdce.jpg?1603808842",
             "name": "Breeches, Brazen Plunderer",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "R"
+            ]
         },
         {
             "id": "4b063dfd-5a80-48c9-8f7b-48d21a129a76",
@@ -176,7 +271,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/b/4b063dfd-5a80-48c9-8f7b-48d21a129a76.jpg?1604589323",
             "name": "Brinelin, the Moon Kraken",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "U"
+            ]
         },
         {
             "id": "125b552b-45ea-4e0b-94a9-8131c97a04c0",
@@ -184,7 +282,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/1/2/125b552b-45ea-4e0b-94a9-8131c97a04c0.jpg?1562389071",
             "name": "Bruse Tarl, Boorish Herder",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "R",
+                "W"
+            ]
         },
         {
             "id": "5cd87cf8-4d5d-4aba-8dfa-800b1fb3799b",
@@ -192,7 +294,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/5/c/5cd87cf8-4d5d-4aba-8dfa-800b1fb3799b.jpg?1603969019",
             "name": "Dargo, the Shipwrecker",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "R"
+            ]
         },
         {
             "id": "1a0adf34-1a2b-497b-aaab-4b2b998ed8b3",
@@ -200,7 +305,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/1/a/1a0adf34-1a2b-497b-aaab-4b2b998ed8b3.jpg?1604055459",
             "name": "Eligeth, Crossroads Augur",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "U"
+            ]
         },
         {
             "id": "86958821-76eb-43a5-974b-7c945e826a66",
@@ -208,7 +316,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/8/6/86958821-76eb-43a5-974b-7c945e826a66.jpg?1604424476",
             "name": "Esior, Wardwing Familiar",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "U"
+            ]
         },
         {
             "id": "84537fea-ad81-4a9a-99d4-722a938adc7d",
@@ -216,7 +327,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/8/4/84537fea-ad81-4a9a-99d4-722a938adc7d.jpg?1604300373",
             "name": "Falthis, Shadowcat Familiar",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "B"
+            ]
         },
         {
             "id": "e4a41506-85c6-4362-b983-36df13db09d9",
@@ -224,7 +338,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/e/4/e4a41506-85c6-4362-b983-36df13db09d9.jpg?1604054097",
             "name": "Ghost of Ramirez DePietro",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "U"
+            ]
         },
         {
             "id": "745d297d-4bb4-40cf-bb9c-99dac04e5069",
@@ -232,7 +349,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/7/4/745d297d-4bb4-40cf-bb9c-99dac04e5069.jpg?1604424163",
             "name": "Gilanra, Caller of Wirewood",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "G"
+            ]
         },
         {
             "id": "a736df42-18e9-4259-b0b8-54d21143e72e",
@@ -240,7 +360,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/a/7/a736df42-18e9-4259-b0b8-54d21143e72e.jpg?1604429615",
             "name": "Glacian, Powerstone Engineer",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "U"
+            ]
         },
         {
             "id": "6bee6eb2-2708-4596-86ad-40eea88dbb6b",
@@ -248,7 +371,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/6/b/6bee6eb2-2708-4596-86ad-40eea88dbb6b.jpg?1598105706",
             "name": "Halana, Kessig Ranger",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "G"
+            ]
         },
         {
             "id": "0409a15a-7cf6-43e5-958c-d23da4304f29",
@@ -256,7 +382,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/0/4/0409a15a-7cf6-43e5-958c-d23da4304f29.jpg?1604537002",
             "name": "Ich-Tekik, Salvage Splicer",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "G"
+            ]
         },
         {
             "id": "8f2abcc3-dc33-4b9d-a372-1d936e954f94",
@@ -264,7 +393,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/8/f/8f2abcc3-dc33-4b9d-a372-1d936e954f94.jpg?1562275017",
             "name": "Ikra Shidiqi, the Usurper",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "B",
+                "G"
+            ]
         },
         {
             "id": "2e89ce6a-6bc9-427f-a8b2-c07a9fc3218f",
@@ -272,7 +405,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/2/e/2e89ce6a-6bc9-427f-a8b2-c07a9fc3218f.jpg?1562272963",
             "name": "Ishai, Ojutai Dragonspeaker",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "W",
+                "U"
+            ]
         },
         {
             "id": "48caf4c4-745c-4072-bf3d-1a3fa7c3bc9c",
@@ -280,7 +417,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/8/48caf4c4-745c-4072-bf3d-1a3fa7c3bc9c.jpg?1605085977",
             "name": "Jeska, Thrice Reborn",
             "planeswalker": true,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "R"
+            ]
         },
         {
             "id": "4c3560ae-b1f6-4269-a9eb-1a45247b6232",
@@ -288,7 +428,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/c/4c3560ae-b1f6-4269-a9eb-1a45247b6232.jpg?1603915979",
             "name": "Kamahl, Heart of Krosa",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "G"
+            ]
         },
         {
             "id": "f606ebf1-483d-4331-b16a-9fb6f591a39f",
@@ -296,7 +439,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/f/6/f606ebf1-483d-4331-b16a-9fb6f591a39f.jpg?1604146565",
             "name": "Kediss, Emberclaw Familiar",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "R"
+            ]
         },
         {
             "id": "de0ba512-b6c3-4931-be05-cb6bd03a4b7c",
@@ -304,7 +450,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/d/e/de0ba512-b6c3-4931-be05-cb6bd03a4b7c.jpg?1604054795",
             "name": "Keleth, Sunmane Familiar",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "W"
+            ]
         },
         {
             "id": "a8f5ffe8-b4ed-4db8-8f0f-97aaeb659689",
@@ -312,7 +461,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/a/8/a8f5ffe8-b4ed-4db8-8f0f-97aaeb659689.jpg?1604054132",
             "name": "Keskit, the Flesh Sculptor",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "B"
+            ]
         },
         {
             "id": "af5105ee-09e2-4344-ab39-00f0e9034c47",
@@ -320,7 +472,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/a/f/af5105ee-09e2-4344-ab39-00f0e9034c47.jpg?1603908216",
             "name": "Kodama of the East Tree",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "G"
+            ]
         },
         {
             "id": "06a981cd-1951-438e-95c9-68294795638e",
@@ -328,7 +483,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/0/6/06a981cd-1951-438e-95c9-68294795638e.jpg?1603708417",
             "name": "Krark, the Thumbless",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "R"
+            ]
         },
         {
             "id": "557fcd17-6cb3-414a-b2b1-ea9ae32e5aec",
@@ -336,7 +494,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/5/5/557fcd17-6cb3-414a-b2b1-ea9ae32e5aec.jpg?1562400560",
             "name": "Kraum, Ludevic's Opus",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "U",
+                "R"
+            ]
         },
         {
             "id": "0f961cec-2f1f-4cd5-bcc3-72e1deb8779e",
@@ -344,7 +506,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/0/f/0f961cec-2f1f-4cd5-bcc3-72e1deb8779e.jpg?1562388621",
             "name": "Kydele, Chosen of Kruphix",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "G",
+                "U"
+            ]
         },
         {
             "id": "02bce846-8049-4d5c-b0ad-8abd484e5a27",
@@ -352,7 +518,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/0/2/02bce846-8049-4d5c-b0ad-8abd484e5a27.jpg?1604054883",
             "name": "Livio, Oathsworn Sentinel",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "W"
+            ]
         },
         {
             "id": "f3e7a886-2593-4e6e-b9da-d7cb417cba08",
@@ -360,7 +529,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/f/3/f3e7a886-2593-4e6e-b9da-d7cb417cba08.jpg?1562425803",
             "name": "Ludevic, Necro-Alchemist",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "U",
+                "R"
+            ]
         },
         {
             "id": "bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461",
@@ -368,7 +541,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/b/b/bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461.jpg?1604053789",
             "name": "Malcolm, Keen-Eyed Navigator",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "U"
+            ]
         },
         {
             "id": "41a76adc-42e1-4f65-940c-d0a5555c0633",
@@ -376,7 +552,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/1/41a76adc-42e1-4f65-940c-d0a5555c0633.jpg?1604602364",
             "name": "Miara, Thorn of the Glade",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "B"
+            ]
         },
         {
             "id": "47c5948b-b021-4d07-8003-9c11db690bc0",
@@ -384,7 +563,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/7/47c5948b-b021-4d07-8003-9c11db690bc0.jpg?1604763331",
             "name": "Nadier, Agent of the Duskenel",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "B"
+            ]
         },
         {
             "id": "9465d118-5ad5-42c5-a512-7aca5f7b905d",
@@ -392,7 +574,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/9/4/9465d118-5ad5-42c5-a512-7aca5f7b905d.jpg?1604056051",
             "name": "Numa, Joraga Chieftain",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "G"
+            ]
         },
         {
             "id": "e9e40e2a-e447-4754-a98b-5521e546781f",
@@ -400,7 +585,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/e/9/e9e40e2a-e447-4754-a98b-5521e546781f.jpg?1604056468",
             "name": "Prava of the Steel Legion",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "W"
+            ]
         },
         {
             "id": "38b00110-e3de-40ce-b2bd-9466fe9e53a3",
@@ -408,7 +596,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/3/8/38b00110-e3de-40ce-b2bd-9466fe9e53a3.jpg?1604053497",
             "name": "Radiant, Serra Archangel",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "W"
+            ]
         },
         {
             "id": "f2725635-8f90-4d17-9568-51218ba663c1",
@@ -416,7 +607,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/f/2/f2725635-8f90-4d17-9568-51218ba663c1.jpg?1562425381",
             "name": "Ravos, Soultender",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "W",
+                "B"
+            ]
         },
         {
             "id": "46975250-950f-4f5d-a7c5-f61aec8e40ad",
@@ -424,7 +619,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/6/46975250-950f-4f5d-a7c5-f61aec8e40ad.jpg?1604053582",
             "name": "Rebbec, Architect of Ascension",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "W"
+            ]
         },
         {
             "id": "8afad106-a49b-4910-959e-228c109ea983",
@@ -432,7 +630,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/8/a/8afad106-a49b-4910-959e-228c109ea983.jpg?1562274641",
             "name": "Reyhan, Last of the Abzan",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "B",
+                "G"
+            ]
         },
         {
             "id": "a4fab67f-00c2-4125-9262-d21a29411797",
@@ -440,7 +642,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/a/4/a4fab67f-00c2-4125-9262-d21a29411797.jpg?1603995398",
             "name": "Rograkh, Son of Rohgahh",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "R"
+            ]
         },
         {
             "id": "714c3a1f-7b30-4ed8-8f38-6176758741fb",
@@ -448,7 +653,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/7/1/714c3a1f-7b30-4ed8-8f38-6176758741fb.jpg?1604520498",
             "name": "Sakashima of a Thousand Faces",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "U"
+            ]
         },
         {
             "id": "4d51a22e-74fc-442e-945a-56d02ca12713",
@@ -456,7 +664,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/d/4d51a22e-74fc-442e-945a-56d02ca12713.jpg?1603908095",
             "name": "Sengir, the Dark Baron",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "B"
+            ]
         },
         {
             "id": "8812e448-241e-4640-9cb6-0cdbe1ad2fcc",
@@ -464,7 +675,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/8/8/8812e448-241e-4640-9cb6-0cdbe1ad2fcc.jpg?1604053900",
             "name": "Siani, Eye of the Storm",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "U"
+            ]
         },
         {
             "id": "19d2671c-39bd-4dd7-ac97-9cdf5c2cb149",
@@ -472,7 +686,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/1/9/19d2671c-39bd-4dd7-ac97-9cdf5c2cb149.jpg?1562390224",
             "name": "Sidar Kondo of Jamuraa",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "G",
+                "W"
+            ]
         },
         {
             "id": "4e3fe912-1374-47c7-b73f-89ef55c479c1",
@@ -480,7 +698,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/e/4e3fe912-1374-47c7-b73f-89ef55c479c1.jpg?1562399367",
             "name": "Silas Renn, Seeker Adept",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "U",
+                "B"
+            ]
         },
         {
             "id": "4da14a82-0c33-4319-9af5-390013ccbe19",
@@ -488,7 +710,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/d/4da14a82-0c33-4319-9af5-390013ccbe19.jpg?1604537152",
             "name": "Slurrk, All-Ingesting",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "G"
+            ]
         },
         {
             "id": "a3d8d64f-a403-42a7-881b-4f70e9fe15a2",
@@ -496,7 +721,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/a/3/a3d8d64f-a403-42a7-881b-4f70e9fe15a2.jpg?1562413758",
             "name": "Tana, the Bloodsower",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "R",
+                "G"
+            ]
         },
         {
             "id": "8f244716-78ab-46f5-b6e9-fc1e6db28052",
@@ -504,7 +733,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/8/f/8f244716-78ab-46f5-b6e9-fc1e6db28052.jpg?1604700473",
             "name": "Tevesh Szat, Doom of Fools",
             "planeswalker": true,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "B"
+            ]
         },
         {
             "id": "a69e6d8f-f742-4508-a83a-38ae84be228c",
@@ -512,7 +744,8 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/a/6/a69e6d8f-f742-4508-a83a-38ae84be228c.jpg?1598105905",
             "name": "The Prismatic Piper",
             "planeswalker": false,
-            "rarity": "C"
+            "rarity": "C",
+            "colors": []
         },
         {
             "id": "21e27b91-c7f1-4709-aa0d-8b5d81b22a0a",
@@ -520,7 +753,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/2/1/21e27b91-c7f1-4709-aa0d-8b5d81b22a0a.jpg?1606762176",
             "name": "Thrasios, Triton Hero",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "G",
+                "U"
+            ]
         },
         {
             "id": "1a05b3e2-259e-4fce-92ee-c00660e22ae7",
@@ -528,7 +765,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/1/a/1a05b3e2-259e-4fce-92ee-c00660e22ae7.jpg?1607363349",
             "name": "Toggo, Goblin Weaponsmith",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "R"
+            ]
         },
         {
             "id": "89903d5e-241f-477e-a336-2abe0232c04a",
@@ -536,7 +776,10 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/8/9/89903d5e-241f-477e-a336-2abe0232c04a.jpg?1604246182",
             "name": "Tormod, the Desecrator",
             "planeswalker": false,
-            "rarity": "U"
+            "rarity": "U",
+            "colors": [
+                "B"
+            ]
         },
         {
             "id": "bc7cbe9b-324e-42b8-94e2-36e91cb32163",
@@ -544,7 +787,11 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/b/c/bc7cbe9b-324e-42b8-94e2-36e91cb32163.jpg?1606762188",
             "name": "Tymna the Weaver",
             "planeswalker": false,
-            "rarity": "R"
+            "rarity": "R",
+            "colors": [
+                "W",
+                "B"
+            ]
         },
         {
             "id": "722b1e02-2268-4e02-8d09-9b337da2a844",
@@ -552,10 +799,13 @@
             "img": "https://c1.scryfall.com/file/scryfall-cards/large/front/7/2/722b1e02-2268-4e02-8d09-9b337da2a844.jpg?1562405249",
             "name": "Vial Smasher the Fierce",
             "planeswalker": false,
-            "rarity": "M"
+            "rarity": "M",
+            "colors": [
+                "B",
+                "R"
+            ]
         }
-    ];
-
+    ]
     const _top10 = {
         "Thrasios, Triton Hero": ["Tymna the Weaver", "Vial Smasher the Fierce", "Kydele, Chosen of Kruphix"],
         "Tymna the Weaver": ["Thrasios, Triton Hero", "Tana, the Bloodsower", "Kraum, Ludevic’s Opus", "Sidar Kondo of Jamuraa", "Ravos, Soultender"],
@@ -577,18 +827,38 @@
 
     const filterIf = (list, predicate, condition) => condition ? list.filter(predicate) : list;
 
+    const filterByColors = x => {
+        if (!w.checked && x.colors.includes('W'))
+            return false;
+        if (!u.checked && x.colors.includes('U'))
+            return false;
+        if (!b.checked && x.colors.includes('B'))
+            return false;
+        if (!r.checked && x.colors.includes('R'))
+            return false;
+        if (!g.checked && x.colors.includes('G'))
+            return false;
+        return true;
+    }
+
     const dance = () => {
         // cry in pipe operator
         _selection1 =
             filterIf(
                 filterIf(
-                    filterIf(_partners
-                        , x => x.name != "The Prismatic Piper"
-                        , piper.checked)
-                    , x => !x.planeswalker
-                    , planeswalkers.checked)
-                , x => x.rarity && (x.rarity === "U" || x.rarity === "C")
-                , artisan.checked);
+                    filterIf(
+                        filterIf(_partners
+                            , x => x.name != "The Prismatic Piper"
+                            , piper.checked)
+                        , x => !x.planeswalker
+                        , planeswalkers.checked)
+                    , x => x.rarity && (x.rarity === "U" || x.rarity === "C")
+                    , artisan.checked)
+                , filterByColors
+                , true);
+
+
+        if (!_selection1.length) return;
 
         _partner1 = getRandomItem(_selection1);
 
@@ -596,6 +866,8 @@
             _selection1.filter(x => x.name != _partner1.name)
             , x => _top10[_partner1.name] === undefined || !_top10[_partner1.name].includes(x.name)
             , pairings.checked)
+
+        if (!_selection2.length) return;
 
         _partner2 = getRandomItem(_selection2);
 
