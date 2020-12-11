@@ -607,6 +607,8 @@
 
     danceButton.onclick = dance;
 
+    document.querySelectorAll('input[type="checkbox"]').forEach(x => x.onclick = dance);
+
     dance();
 </script>
 
