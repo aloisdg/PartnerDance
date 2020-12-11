@@ -399,9 +399,7 @@
             ];
 
             const dance = () => {
-                console.log("hey")
                 const partner1 = partners[Math.floor(Math.random() * partners.length)];
-
                 const partner2 = partners.filter(x => x.name != partner1.name)[Math.floor(Math.random() * partners.length - 1)];
 
                 one.firstElementChild.textContent = partner1.name;
@@ -411,7 +409,6 @@
             };
 
             danceButton.onclick = dance;
-
             dance();
         </script>
 
