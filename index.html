@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Partner Dance</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 115 115%22><text y=%22.9em%22 font-size=%2290%22>🩰</text></svg>">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .duo {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.5em;
+                margin-bottom: 0.5em;
+            }
+
+            img {
+                border-radius: 17px;
+            }
+        </style>
+
+        <body>
+
+            <h1>
+                🩰 Partner Dance
+            </h1>
+
+            <div class="duo">
+                <div id="one" class="card">
+                    <h2>
+                    </h2>
+                    <img />
+                </div>
+                <div id="two" class="card">
+                    <h2>
+                    </h2>
+                    <img />
+                </div>
+
+
+            </div>
+
+            <button id="danceButton" type="button" class="center">
+                dance
+            </button>
+
+        </body>
+
+        <script>
+            // https://scryfall.com/search?q=is%3Acommander+o%3Apartner+-o%3A%22partner+with%22&order=name&as=grid&unique=cards
+
+            /*
+            copy([...document.querySelectorAll('div.card-grid-item')].map(x => ({id: x.dataset.cardId, href: x.firstElementChild.href, img: x.querySelector("img").src, name: x.querySelector('.card-grid-item-invisible-label').textContent })))
+            */
+
+            const partners = [
+                {
+                    "id": "3b951e0c-a4dd-4a20-87c6-eaa947e33aa4",
+                    "href": "https://scryfall.com/card/c16/26/akiri-line-slinger",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3b951e0c-a4dd-4a20-87c6-eaa947e33aa4.jpg?1606762145",
+                    "name": "Akiri, Line-Slinger"
+                },
+                {
+                    "id": "c0bdd07d-9fb9-4ee4-80db-494ee0cba58d",
+                    "href": "https://scryfall.com/card/cmr/2/akroma-vision-of-ixidor",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/c/0/c0bdd07d-9fb9-4ee4-80db-494ee0cba58d.jpg?1604534740",
+                    "name": "Akroma, Vision of Ixidor"
+                },
+                {
+                    "id": "90c51949-b1ef-4c6e-98b0-4fb33a81db24",
+                    "href": "https://scryfall.com/card/cmr/160/alena-kessig-trapper",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/9/0/90c51949-b1ef-4c6e-98b0-4fb33a81db24.jpg?1598141150",
+                    "name": "Alena, Kessig Trapper"
+                },
+                {
+                    "id": "2047bfa4-3f4d-47bd-9484-545686f15b75",
+                    "href": "https://scryfall.com/card/cmr/4/alharu-solemn-ritualist",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/2/0/2047bfa4-3f4d-47bd-9484-545686f15b75.jpg?1604600678",
+                    "name": "Alharu, Solemn Ritualist"
+                },
+                {
+                    "id": "9a67cfaa-990c-4dcb-97a9-9c5d7316cabe",
+                    "href": "https://scryfall.com/card/cmr/214/anara-wolvid-familiar",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/9/a/9a67cfaa-990c-4dcb-97a9-9c5d7316cabe.jpg?1604536715",
+                    "name": "Anara, Wolvid Familiar"
+                },
+                {
+                    "id": "728b802c-969b-4865-b7a0-871c585d097a",
+                    "href": "https://scryfall.com/card/cmr/10/ardenn-intrepid-archaeologist",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/7/2/728b802c-969b-4865-b7a0-871c585d097a.jpg?1604153410",
+                    "name": "Ardenn, Intrepid Archaeologist"
+                },
+                {
+                    "id": "d5f69e24-6b5c-4a9a-af5b-1ce88efdc0aa",
+                    "href": "https://scryfall.com/card/cmr/108/armix-filigree-thrasher",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/d/5/d5f69e24-6b5c-4a9a-af5b-1ce88efdc0aa.jpg?1604153742",
+                    "name": "Armix, Filigree Thrasher"
+                },
+                {
+                    "id": "83e8fe2e-ec6c-47fc-85c0-6eec185ecdce",
+                    "href": "https://scryfall.com/card/cmr/165/breeches-brazen-plunderer",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/3/83e8fe2e-ec6c-47fc-85c0-6eec185ecdce.jpg?1603808842",
+                    "name": "Breeches, Brazen Plunderer"
+                },
+                {
+                    "id": "4b063dfd-5a80-48c9-8f7b-48d21a129a76",
+                    "href": "https://scryfall.com/card/cmr/60/brinelin-the-moon-kraken",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/b/4b063dfd-5a80-48c9-8f7b-48d21a129a76.jpg?1604589323",
+                    "name": "Brinelin, the Moon Kraken"
+                },
+                {
+                    "id": "125b552b-45ea-4e0b-94a9-8131c97a04c0",
+                    "href": "https://scryfall.com/card/c16/30/bruse-tarl-boorish-herder",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/2/125b552b-45ea-4e0b-94a9-8131c97a04c0.jpg?1562389071",
+                    "name": "Bruse Tarl, Boorish Herder"
+                },
+                {
+                    "id": "5cd87cf8-4d5d-4aba-8dfa-800b1fb3799b",
+                    "href": "https://scryfall.com/card/cmr/172/dargo-the-shipwrecker",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/5/c/5cd87cf8-4d5d-4aba-8dfa-800b1fb3799b.jpg?1603969019",
+                    "name": "Dargo, the Shipwrecker"
+                },
+                {
+                    "id": "1a0adf34-1a2b-497b-aaab-4b2b998ed8b3",
+                    "href": "https://scryfall.com/card/cmr/66/eligeth-crossroads-augur",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a0adf34-1a2b-497b-aaab-4b2b998ed8b3.jpg?1604055459",
+                    "name": "Eligeth, Crossroads Augur"
+                },
+                {
+                    "id": "86958821-76eb-43a5-974b-7c945e826a66",
+                    "href": "https://scryfall.com/card/cmr/67/esior-wardwing-familiar",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/6/86958821-76eb-43a5-974b-7c945e826a66.jpg?1604424476",
+                    "name": "Esior, Wardwing Familiar"
+                },
+                {
+                    "id": "84537fea-ad81-4a9a-99d4-722a938adc7d",
+                    "href": "https://scryfall.com/card/cmr/126/falthis-shadowcat-familiar",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/4/84537fea-ad81-4a9a-99d4-722a938adc7d.jpg?1604300373",
+                    "name": "Falthis, Shadowcat Familiar"
+                },
+                {
+                    "id": "e4a41506-85c6-4362-b983-36df13db09d9",
+                    "href": "https://scryfall.com/card/cmr/71/ghost-of-ramirez-depietro",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/e/4/e4a41506-85c6-4362-b983-36df13db09d9.jpg?1604054097",
+                    "name": "Ghost of Ramirez DePietro"
+                },
+                {
+                    "id": "745d297d-4bb4-40cf-bb9c-99dac04e5069",
+                    "href": "https://scryfall.com/card/cmr/230/gilanra-caller-of-wirewood",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/7/4/745d297d-4bb4-40cf-bb9c-99dac04e5069.jpg?1604424163",
+                    "name": "Gilanra, Caller of Wirewood"
+                },
+                {
+                    "id": "a736df42-18e9-4259-b0b8-54d21143e72e",
+                    "href": "https://scryfall.com/card/cmr/72/glacian-powerstone-engineer",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/a/7/a736df42-18e9-4259-b0b8-54d21143e72e.jpg?1604429615",
+                    "name": "Glacian, Powerstone Engineer"
+                },
+                {
+                    "id": "6bee6eb2-2708-4596-86ad-40eea88dbb6b",
+                    "href": "https://scryfall.com/card/cmr/231/halana-kessig-ranger",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6bee6eb2-2708-4596-86ad-40eea88dbb6b.jpg?1598105706",
+                    "name": "Halana, Kessig Ranger"
+                },
+                {
+                    "id": "0409a15a-7cf6-43e5-958c-d23da4304f29",
+                    "href": "https://scryfall.com/card/cmr/233/ich-tekik-salvage-splicer",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/0/4/0409a15a-7cf6-43e5-958c-d23da4304f29.jpg?1604537002",
+                    "name": "Ich-Tekik, Salvage Splicer"
+                },
+                {
+                    "id": "8f2abcc3-dc33-4b9d-a372-1d936e954f94",
+                    "href": "https://scryfall.com/card/cm2/11/ikra-shidiqi-the-usurper",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/f/8f2abcc3-dc33-4b9d-a372-1d936e954f94.jpg?1562275017",
+                    "name": "Ikra Shidiqi, the Usurper"
+                },
+                {
+                    "id": "2e89ce6a-6bc9-427f-a8b2-c07a9fc3218f",
+                    "href": "https://scryfall.com/card/cm2/12/ishai-ojutai-dragonspeaker",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e89ce6a-6bc9-427f-a8b2-c07a9fc3218f.jpg?1562272963",
+                    "name": "Ishai, Ojutai Dragonspeaker"
+                },
+                {
+                    "id": "48caf4c4-745c-4072-bf3d-1a3fa7c3bc9c",
+                    "href": "https://scryfall.com/card/cmr/186/jeska-thrice-reborn",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/8/48caf4c4-745c-4072-bf3d-1a3fa7c3bc9c.jpg?1605085977",
+                    "name": "Jeska, Thrice Reborn"
+                },
+                {
+                    "id": "4c3560ae-b1f6-4269-a9eb-1a45247b6232",
+                    "href": "https://scryfall.com/card/cmr/237/kamahl-heart-of-krosa",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c3560ae-b1f6-4269-a9eb-1a45247b6232.jpg?1603915979",
+                    "name": "Kamahl, Heart of Krosa"
+                },
+                {
+                    "id": "f606ebf1-483d-4331-b16a-9fb6f591a39f",
+                    "href": "https://scryfall.com/card/cmr/188/kediss-emberclaw-familiar",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/f/6/f606ebf1-483d-4331-b16a-9fb6f591a39f.jpg?1604146565",
+                    "name": "Kediss, Emberclaw Familiar"
+                },
+                {
+                    "id": "de0ba512-b6c3-4931-be05-cb6bd03a4b7c",
+                    "href": "https://scryfall.com/card/cmr/28/keleth-sunmane-familiar",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/d/e/de0ba512-b6c3-4931-be05-cb6bd03a4b7c.jpg?1604054795",
+                    "name": "Keleth, Sunmane Familiar"
+                },
+                {
+                    "id": "a8f5ffe8-b4ed-4db8-8f0f-97aaeb659689",
+                    "href": "https://scryfall.com/card/cmr/131/keskit-the-flesh-sculptor",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/a/8/a8f5ffe8-b4ed-4db8-8f0f-97aaeb659689.jpg?1604054132",
+                    "name": "Keskit, the Flesh Sculptor"
+                },
+                {
+                    "id": "af5105ee-09e2-4344-ab39-00f0e9034c47",
+                    "href": "https://scryfall.com/card/cmr/239/kodama-of-the-east-tree",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/a/f/af5105ee-09e2-4344-ab39-00f0e9034c47.jpg?1603908216",
+                    "name": "Kodama of the East Tree"
+                },
+                {
+                    "id": "06a981cd-1951-438e-95c9-68294795638e",
+                    "href": "https://scryfall.com/card/cmr/189/krark-the-thumbless",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/0/6/06a981cd-1951-438e-95c9-68294795638e.jpg?1603708417",
+                    "name": "Krark, the Thumbless"
+                },
+                {
+                    "id": "557fcd17-6cb3-414a-b2b1-ea9ae32e5aec",
+                    "href": "https://scryfall.com/card/c16/34/kraum-ludevics-opus",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/557fcd17-6cb3-414a-b2b1-ea9ae32e5aec.jpg?1562400560",
+                    "name": "Kraum, Ludevic's Opus"
+                },
+                {
+                    "id": "0f961cec-2f1f-4cd5-bcc3-72e1deb8779e",
+                    "href": "https://scryfall.com/card/c16/35/kydele-chosen-of-kruphix",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/0/f/0f961cec-2f1f-4cd5-bcc3-72e1deb8779e.jpg?1562388621",
+                    "name": "Kydele, Chosen of Kruphix"
+                },
+                {
+                    "id": "02bce846-8049-4d5c-b0ad-8abd484e5a27",
+                    "href": "https://scryfall.com/card/cmr/31/livio-oathsworn-sentinel",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/0/2/02bce846-8049-4d5c-b0ad-8abd484e5a27.jpg?1604054883",
+                    "name": "Livio, Oathsworn Sentinel"
+                },
+                {
+                    "id": "f3e7a886-2593-4e6e-b9da-d7cb417cba08",
+                    "href": "https://scryfall.com/card/c16/37/ludevic-necro-alchemist",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f3e7a886-2593-4e6e-b9da-d7cb417cba08.jpg?1562425803",
+                    "name": "Ludevic, Necro-Alchemist"
+                },
+                {
+                    "id": "bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461",
+                    "href": "https://scryfall.com/card/cmr/79/malcolm-keen-eyed-navigator",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461.jpg?1604053789",
+                    "name": "Malcolm, Keen-Eyed Navigator"
+                },
+                {
+                    "id": "41a76adc-42e1-4f65-940c-d0a5555c0633",
+                    "href": "https://scryfall.com/card/cmr/133/miara-thorn-of-the-glade",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/1/41a76adc-42e1-4f65-940c-d0a5555c0633.jpg?1604602364",
+                    "name": "Miara, Thorn of the Glade"
+                },
+                {
+                    "id": "47c5948b-b021-4d07-8003-9c11db690bc0",
+                    "href": "https://scryfall.com/card/cmr/135/nadier-agent-of-the-duskenel",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/7/47c5948b-b021-4d07-8003-9c11db690bc0.jpg?1604763331",
+                    "name": "Nadier, Agent of the Duskenel"
+                },
+                {
+                    "id": "9465d118-5ad5-42c5-a512-7aca5f7b905d",
+                    "href": "https://scryfall.com/card/cmr/246/numa-joraga-chieftain",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/9/4/9465d118-5ad5-42c5-a512-7aca5f7b905d.jpg?1604056051",
+                    "name": "Numa, Joraga Chieftain"
+                },
+                {
+                    "id": "e9e40e2a-e447-4754-a98b-5521e546781f",
+                    "href": "https://scryfall.com/card/cmr/38/prava-of-the-steel-legion",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/e/9/e9e40e2a-e447-4754-a98b-5521e546781f.jpg?1604056468",
+                    "name": "Prava of the Steel Legion"
+                },
+                {
+                    "id": "38b00110-e3de-40ce-b2bd-9466fe9e53a3",
+                    "href": "https://scryfall.com/card/cmr/40/radiant-serra-archangel",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/3/8/38b00110-e3de-40ce-b2bd-9466fe9e53a3.jpg?1604053497",
+                    "name": "Radiant, Serra Archangel"
+                },
+                {
+                    "id": "f2725635-8f90-4d17-9568-51218ba663c1",
+                    "href": "https://scryfall.com/card/c16/39/ravos-soultender",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/f/2/f2725635-8f90-4d17-9568-51218ba663c1.jpg?1562425381",
+                    "name": "Ravos, Soultender"
+                },
+                {
+                    "id": "46975250-950f-4f5d-a7c5-f61aec8e40ad",
+                    "href": "https://scryfall.com/card/cmr/42/rebbec-architect-of-ascension",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/46975250-950f-4f5d-a7c5-f61aec8e40ad.jpg?1604053582",
+                    "name": "Rebbec, Architect of Ascension"
+                },
+                {
+                    "id": "8afad106-a49b-4910-959e-228c109ea983",
+                    "href": "https://scryfall.com/card/cm2/13/reyhan-last-of-the-abzan",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8afad106-a49b-4910-959e-228c109ea983.jpg?1562274641",
+                    "name": "Reyhan, Last of the Abzan"
+                },
+                {
+                    "id": "a4fab67f-00c2-4125-9262-d21a29411797",
+                    "href": "https://scryfall.com/card/cmr/197/rograkh-son-of-rohgahh",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/a/4/a4fab67f-00c2-4125-9262-d21a29411797.jpg?1603995398",
+                    "name": "Rograkh, Son of Rohgahh"
+                },
+                {
+                    "id": "714c3a1f-7b30-4ed8-8f38-6176758741fb",
+                    "href": "https://scryfall.com/card/cmr/89/sakashima-of-a-thousand-faces",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/7/1/714c3a1f-7b30-4ed8-8f38-6176758741fb.jpg?1604520498",
+                    "name": "Sakashima of a Thousand Faces"
+                },
+                {
+                    "id": "4d51a22e-74fc-442e-945a-56d02ca12713",
+                    "href": "https://scryfall.com/card/cmr/149/sengir-the-dark-baron",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/d/4d51a22e-74fc-442e-945a-56d02ca12713.jpg?1603908095",
+                    "name": "Sengir, the Dark Baron"
+                },
+                {
+                    "id": "8812e448-241e-4640-9cb6-0cdbe1ad2fcc",
+                    "href": "https://scryfall.com/card/cmr/95/siani-eye-of-the-storm",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/8812e448-241e-4640-9cb6-0cdbe1ad2fcc.jpg?1604053900",
+                    "name": "Siani, Eye of the Storm"
+                },
+                {
+                    "id": "19d2671c-39bd-4dd7-ac97-9cdf5c2cb149",
+                    "href": "https://scryfall.com/card/c16/42/sidar-kondo-of-jamuraa",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/19d2671c-39bd-4dd7-ac97-9cdf5c2cb149.jpg?1562390224",
+                    "name": "Sidar Kondo of Jamuraa"
+                },
+                {
+                    "id": "4e3fe912-1374-47c7-b73f-89ef55c479c1",
+                    "href": "https://scryfall.com/card/c16/43/silas-renn-seeker-adept",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4e3fe912-1374-47c7-b73f-89ef55c479c1.jpg?1562399367",
+                    "name": "Silas Renn, Seeker Adept"
+                },
+                {
+                    "id": "4da14a82-0c33-4319-9af5-390013ccbe19",
+                    "href": "https://scryfall.com/card/cmr/256/slurrk-all-ingesting",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/d/4da14a82-0c33-4319-9af5-390013ccbe19.jpg?1604537152",
+                    "name": "Slurrk, All-Ingesting"
+                },
+                {
+                    "id": "a3d8d64f-a403-42a7-881b-4f70e9fe15a2",
+                    "href": "https://scryfall.com/card/c16/45/tana-the-bloodsower",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a3d8d64f-a403-42a7-881b-4f70e9fe15a2.jpg?1562413758",
+                    "name": "Tana, the Bloodsower"
+                },
+                {
+                    "id": "8f244716-78ab-46f5-b6e9-fc1e6db28052",
+                    "href": "https://scryfall.com/card/cmr/153/tevesh-szat-doom-of-fools",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/f/8f244716-78ab-46f5-b6e9-fc1e6db28052.jpg?1604700473",
+                    "name": "Tevesh Szat, Doom of Fools"
+                },
+                /*{
+                  "id": "a69e6d8f-f742-4508-a83a-38ae84be228c",
+                  "href": "https://scryfall.com/card/cmr/1/the-prismatic-piper",
+                  "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/a/6/a69e6d8f-f742-4508-a83a-38ae84be228c.jpg?1598105905",
+                  "name": "The Prismatic Piper"
+                },*/
+                {
+                    "id": "21e27b91-c7f1-4709-aa0d-8b5d81b22a0a",
+                    "href": "https://scryfall.com/card/c16/46/thrasios-triton-hero",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/2/1/21e27b91-c7f1-4709-aa0d-8b5d81b22a0a.jpg?1606762176",
+                    "name": "Thrasios, Triton Hero"
+                },
+                {
+                    "id": "1a05b3e2-259e-4fce-92ee-c00660e22ae7",
+                    "href": "https://scryfall.com/card/cmr/204/toggo-goblin-weaponsmith",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a05b3e2-259e-4fce-92ee-c00660e22ae7.jpg?1607363349",
+                    "name": "Toggo, Goblin Weaponsmith"
+                },
+                {
+                    "id": "89903d5e-241f-477e-a336-2abe0232c04a",
+                    "href": "https://scryfall.com/card/cmr/155/tormod-the-desecrator",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/9/89903d5e-241f-477e-a336-2abe0232c04a.jpg?1604246182",
+                    "name": "Tormod, the Desecrator"
+                },
+                {
+                    "id": "bc7cbe9b-324e-42b8-94e2-36e91cb32163",
+                    "href": "https://scryfall.com/card/c16/48/tymna-the-weaver",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bc7cbe9b-324e-42b8-94e2-36e91cb32163.jpg?1606762188",
+                    "name": "Tymna the Weaver"
+                },
+                {
+                    "id": "722b1e02-2268-4e02-8d09-9b337da2a844",
+                    "href": "https://scryfall.com/card/c16/49/vial-smasher-the-fierce",
+                    "img": "https://c1.scryfall.com/file/scryfall-cards/normal/front/7/2/722b1e02-2268-4e02-8d09-9b337da2a844.jpg?1562405249",
+                    "name": "Vial Smasher the Fierce"
+                }
+            ];
+
+            const dance = () => {
+                console.log("hey")
+                const partner1 = partners[Math.floor(Math.random() * partners.length)];
+
+                const partner2 = partners.filter(x => x.name != partner1.name)[Math.floor(Math.random() * partners.length - 1)];
+
+                one.firstElementChild.textContent = partner1.name;
+                two.firstElementChild.textContent = partner2.name;
+                one.lastElementChild.src = partner1.img;
+                two.lastElementChild.src = partner2.img;
+            };
+
+            danceButton.onclick = dance;
+
+            dance();
+        </script>
+
+</html>
